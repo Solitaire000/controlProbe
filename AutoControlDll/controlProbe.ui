@@ -1,0 +1,2338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>controlProbeClass</class>
+ <widget class="QWidget" name="controlProbeClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>750</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>controlProbe</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#controlProbeClass{
+		background-color:#d4dff3;
+		border:1px solid #d4dff3; }
+
+QLabel{
+background-color:#d4dff3;
+
+}
+
+
+</string>
+  </property>
+  <widget class="QGroupBox" name="visio">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>4</y>
+     <width>146</width>
+     <height>731</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+		background-color:#d4dff3; }
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" rowstretch="9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" columnstretch="0,0">
+    <item row="20" column="1">
+     <widget class="QPushButton" name="reset">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>重置</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0" colspan="2">
+     <widget class="QLabel" name="label_3">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Adobe Arabic&quot;;
+    font-weight: bold;
+    color: #303133;
+
+    qproperty-alignment: AlignCenter;
+	
+	
+background-color: rgb(218, 218, 218);
+    border-bottom: 1px solid #E4E7ED;
+
+    padding: 8px;</string>
+      </property>
+      <property name="text">
+       <string>压力模块</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QPushButton" name="pressureDisconnect">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>断连</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="0">
+     <widget class="QCheckBox" name="X">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #C0C4CC;
+    background: white;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3A7AFE;
+}</string>
+      </property>
+      <property name="text">
+       <string>X(μm)</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="styleSheet">
+       <string notr="true">color: #606266;
+border: none;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="text">
+       <string>压力值(g)</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::RichText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="1">
+     <widget class="QLabel" name="XPos">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid grey;
+background-color:rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="0">
+     <widget class="QCheckBox" name="Y">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QCheckBox::indicator {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #C0C4CC;
+    background: white;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3A7AFE;
+}</string>
+      </property>
+      <property name="text">
+       <string>Y(μm)</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="1">
+     <widget class="QLabel" name="ZPos">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border:1px solid grey;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="0">
+     <widget class="QCheckBox" name="U">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+  	width: 10px;
+    height: 10px;
+    border: 1px solid #C0C4CC;
+    background: white;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3A7AFE;
+}</string>
+      </property>
+      <property name="text">
+       <string>U(°)</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="1">
+     <widget class="QPushButton" name="home">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>回零</string>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="0" colspan="2">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Adobe Arabic&quot;;
+    font-weight: bold;
+    color: #303133;
+
+    qproperty-alignment: AlignCenter;
+
+    background-color: rgb(218, 218, 218);
+    border-bottom: 1px solid #E4E7ED;
+
+    padding: 8px;</string>
+      </property>
+      <property name="text">
+       <string>运动模块</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0" colspan="2">
+     <widget class="QPushButton" name="zero">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>校零</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QRadioButton" name="modelChange">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="text">
+       <string>ASCII</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" colspan="2">
+     <widget class="QComboBox" name="pressureCOM">
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+    
+	
+	
+	background-color: rgba(226, 226, 226, 150);
+    border: 1px solid #DCDCDC;
+    padding: 4px 8px;
+}
+
+QComboBox:hover {
+    border: 1px solid #3A7AFE;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="1">
+     <widget class="QLabel" name="YPos">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border:1px solid grey;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="QDoubleSpinBox" name="globalPressureThresholdBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="minimum">
+       <double>-99.989999999999995</double>
+      </property>
+      <property name="value">
+       <double>15.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="0">
+     <widget class="QPushButton" name="pressureConnect">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>连接</string>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QPushButton" name="full">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>校满</string>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="0">
+     <widget class="QCheckBox" name="Z">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox::indicator {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #C0C4CC;
+    background: white;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3A7AFE;
+}</string>
+      </property>
+      <property name="text">
+       <string>Z(μm)</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="0">
+     <widget class="QPushButton" name="moveDisconnect">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>断连</string>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="1">
+     <widget class="QLabel" name="UPos">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+border:1px solid grey;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="1">
+     <widget class="QDoubleSpinBox" name="fullValue">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="minimum">
+       <double>-99.989999999999995</double>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QCheckBox" name="save">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>save</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0">
+     <widget class="QPushButton" name="setPressureThreshold">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>压力阈值</string>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="0">
+     <widget class="QPushButton" name="moveConnect">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>连接</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QLabel" name="pressureValue">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid grey;
+background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="9" colspan="2">
+     <widget class="QLabel" name="visioLabel_2">
+      <property name="minimumSize">
+       <size>
+        <width>126</width>
+        <height>149</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:1px solid grey;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="move">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>0</y>
+     <width>350</width>
+     <height>735</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+		background-color:#d4dff3; }
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="5,0,0">
+    <item row="0" column="0">
+     <widget class="QLabel" name="visioLabel">
+      <property name="styleSheet">
+       <string notr="true">border:1px solid grey;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTextEdit" name="state">
+      <property name="styleSheet">
+       <string notr="true">QTextEdit{
+		border:1px solid grey;
+		background-color:#d4dff3; }
+
+</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTabWidget" name="moveCard">
+      <property name="styleSheet">
+       <string notr="true">QTabWidget{background-color:rgb(212, 223, 243);}
+QTabBar::tab{background-color:rgb(212, 223, 243);color:rgb(0,0,0);font:10pt '宋体'}
+QTabBar::tab::selected{background-color:rgb(51,153,255);color:rgb(255,255,255);font:10pt '宋体'}
+
+QLabel{
+background-color:#d4dff3;
+
+}
+QLabel{
+background-color:#d4dff3;
+
+}
+QTabWidget::pane { border: 0; }
+QTabWidget { margin: 0; padding: 0; }
+QTabBar { margin: 0; }</string>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_1">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tab_1{
+		background-color:#d4dff3;
+		border:1px solid #d4dff3;
+ }
+</string>
+       </property>
+       <attribute name="title">
+        <string>点位运动</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5" rowstretch="1,1,1,1,1,1" columnstretch="1,1,1,1,1">
+        <item row="2" column="2">
+         <widget class="QPushButton" name="XP">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="YN">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>X轴</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QDoubleSpinBox" name="ZSpeed">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QDoubleSpinBox" name="XDisplacement">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QDoubleSpinBox" name="UDisplacement">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="ZP">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QDialogButtonBox" name="recordPos">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="toolTipDuration">
+           <number>2</number>
+          </property>
+          <property name="whatsThis">
+           <string/>
+          </property>
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="accessibleDescription">
+           <string/>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="standardButtons">
+           <set>QDialogButtonBox::Apply|QDialogButtonBox::Save</set>
+          </property>
+          <property name="centerButtons">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Y轴</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="4">
+         <widget class="QDoubleSpinBox" name="USpeed">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>Z轴</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_5">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>位移(μm)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QPushButton" name="UN">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QDoubleSpinBox" name="YDisplacement">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QDoubleSpinBox" name="YSpeed">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="UP">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="XN">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="YP">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QLabel" name="label_10">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>速度(μm/s)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_9">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>正向</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QDoubleSpinBox" name="ZDisplacement">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="ZN">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>U轴</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QDoubleSpinBox" name="XSpeed">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>1.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_8">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>负向</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLabel" name="label_11">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>(0.001°)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QLabel" name="label_12">
+          <property name="styleSheet">
+           <string notr="true">border: none;</string>
+          </property>
+          <property name="text">
+           <string>(0.001°/s)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <property name="styleSheet">
+        <string notr="true">QWidget#tab{
+		background-color:#d4dff3;
+		border:1px solid #d4dff3; }
+
+</string>
+       </property>
+       <attribute name="title">
+        <string>规划运动</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_10">
+        <item row="2" column="4">
+         <widget class="QPushButton" name="remove">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Remove</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="add">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="5">
+         <widget class="QPushButton" name="planMove">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>PlanMove</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QDoubleSpinBox" name="cycles">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(226, 226, 226, 150);</string>
+          </property>
+          <property name="decimals">
+           <number>0</number>
+          </property>
+          <property name="minimum">
+           <double>1.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="cycleFinished">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_15">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="text">
+           <string>循环次数</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="6">
+         <widget class="QTableWidget" name="moveTable">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="rowCount">
+           <number>2</number>
+          </property>
+          <property name="columnCount">
+           <number>5</number>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>80</number>
+          </attribute>
+          <row/>
+          <row/>
+          <column>
+           <property name="text">
+            <string>Y(微米)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Y_v(微米/s)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Z(微米)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Z_v(微米/s)</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>延时/s</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="background">
+            <brush brushstyle="NoBrush">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
+            </brush>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>5</string>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
+          <item row="1" column="3">
+           <property name="text">
+            <string>5</string>
+           </property>
+          </item>
+          <item row="1" column="4">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="automation">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>0</y>
+     <width>230</width>
+     <height>735</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox{
+		background-color:#d4dff3; }
+</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_9" rowstretch="1,0,0,0">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="styleSheet">
+       <string notr="true">font: 16pt &quot;Adobe Arabic&quot;;
+    font-weight: bold;
+    color: #303133;
+
+    qproperty-alignment: AlignCenter;
+
+    background-color: rgb(218, 218, 218);
+    border-bottom: 1px solid #E4E7ED;
+
+    padding: 8px;</string>
+      </property>
+      <property name="text">
+       <string>自动化模块</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="stop">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+    /* 正常状态 */
+    background-color: #EA4335;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+font: 75 20pt &quot;Adobe Arabic&quot;;
+
+}
+
+QPushButton:hover {
+    /* 鼠标停留状态 */
+    background-color: rgb(225, 0, 0);
+}
+
+QPushButton:pressed {
+    /* 鼠标按下状态 */
+    background-color: rgb(172, 0, 0);
+}</string>
+      </property>
+      <property name="text">
+       <string>STOP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QTabWidget" name="PressDown">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget{background-color:rgb(212, 223, 243);}
+QTabBar::tab{background-color:rgb(212, 223, 243);color:rgb(0,0,0);font:10pt '宋体'}
+QTabBar::tab::selected{background-color:rgb(51,153,255);color:rgb(255,255,255);font:10pt '宋体'}
+
+QLabel{
+background-color:#d4dff3;
+
+}
+
+QWidget#pressDown_1{
+		background-color:#d4dff3;
+		border:1px solid #d4dff3; }
+
+
+QWidget#pressDown_2{
+		background-color:#d4dff3;
+		border:1px solid #d4dff3; }
+
+
+QTabWidget::pane { border: 0; }
+QTabWidget { margin: 0; padding: 0; }
+QTabBar { margin: 0; }</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pressDown_1">
+       <attribute name="title">
+        <string>单轴下压</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="1" column="0" colspan="2">
+         <widget class="QPushButton" name="startPressDown_1">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>单轴下压</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_7">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>压力阈值(g)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="pressureThreshold">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="value">
+           <double>15.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pressDown_2">
+       <attribute name="title">
+        <string>双轴下压</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="1" column="0" colspan="2">
+         <widget class="QPushButton" name="startPressDown_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>双轴下压</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_14">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>压力阈值(g)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QDoubleSpinBox" name="pressureThreshold_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTabWidget" name="Level">
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabWidget{background-color:rgb(212, 223, 243);}
+QTabBar::tab{background-color:rgb(212, 223, 243);color:rgb(0,0,0);font:10pt '宋体'}
+QTabBar::tab::selected{background-color:rgb(51,153,255);color:rgb(255,255,255);font:10pt '宋体'}
+
+QLabel{
+background-color:#d4dff3;
+
+}
+QTabWidget::pane { border: 0; }
+QTabWidget { margin: 0; padding: 0; }
+QTabBar { margin: 0; }</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="level_2">
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QWidget#level_2{
+		background-color:#d4dff3;
+		border:1px solid #d4dff3; }
+
+</string>
+       </property>
+       <attribute name="title">
+        <string>针痕调平</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="19" column="1">
+         <widget class="QDoubleSpinBox" name="Z_UPSpeed">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>100.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QDoubleSpinBox" name="PixelSize">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>6</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.001540000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="1">
+         <widget class="QDoubleSpinBox" name="Y_Disp">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>30.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QDoubleSpinBox" name="maxCycles">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>3.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_28">
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>9</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font:9pt;
+color: #606266;
+
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>滑移距离</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="0">
+         <widget class="QLabel" name="label_26">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>抬升速度(μm/s)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0">
+         <widget class="QLabel" name="label_21">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>调平精度</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="1">
+         <widget class="QDoubleSpinBox" name="downSpeed">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>100.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="0">
+         <widget class="QLabel" name="label_30">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+font: 9pt &quot;Microsoft YaHei&quot;;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>Y轴速度(μm/s)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="30" column="1">
+         <widget class="QPushButton" name="initZero">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>初始化零点</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_33">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>安全高度</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QDoubleSpinBox" name="ratio">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>4</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.100000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="28" column="0" rowspan="4">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="styleSheet">
+           <string notr="true">QGroupBox{
+		border:1px solid grey;
+		background-color:#d4dff3; }
+
+</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_11">
+           <property name="leftMargin">
+            <number>3</number>
+           </property>
+           <property name="rightMargin">
+            <number>3</number>
+           </property>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="autoInit">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>自动初始化</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="openAutoInit">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox::indicator {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #C0C4CC;
+    background: white;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3A7AFE;
+}</string>
+             </property>
+             <property name="text">
+              <string>开启</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="InitProbe">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string>初始化</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QDoubleSpinBox" name="SlipDistance">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>20.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_31">
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Microsoft YaHei&quot;;
+color: #606266;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>单个像素大小</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QDoubleSpinBox" name="ProbeMark_Distance">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>3.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>下压距离(μm)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="0">
+         <widget class="QLabel" name="label_29">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Y轴距离(μm)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QDoubleSpinBox" name="safeHeight">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>50.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="1">
+         <widget class="QDoubleSpinBox" name="Y_Speed">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>100.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="26" column="1">
+         <widget class="QRadioButton" name="probe2">
+          <property name="styleSheet">
+           <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>探针2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="32" column="0" colspan="2">
+         <widget class="QPushButton" name="startLevel_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>确定调平</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="1">
+         <widget class="QPushButton" name="clear">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>清除窗口</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0">
+         <widget class="QLabel" name="label_22">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>最大循环次数</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_27">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>初始化旋转角度</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QDoubleSpinBox" name="depth">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>30.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_32">
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei</family>
+            <pointsize>9</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font:9pt &quot;Microsoft YaHei&quot;;
+color: #606266;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>识别系数</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="0">
+         <widget class="QLabel" name="label_24">
+          <property name="styleSheet">
+           <string notr="true">color: #606266;
+border: none;
+font: 9pt &quot;Microsoft YaHei&quot;;</string>
+          </property>
+          <property name="text">
+           <string>下压速度(μm/s)</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QDoubleSpinBox" name="InitAngle">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="maximum">
+           <double>10000.000000000000000</double>
+          </property>
+          <property name="value">
+           <double>50.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="1">
+         <widget class="QPushButton" name="manualAngle">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>识别探针</string>
+          </property>
+         </widget>
+        </item>
+        <item row="26" column="0">
+         <widget class="QRadioButton" name="probe1">
+          <property name="styleSheet">
+           <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>探针1</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="level_1">
+       <property name="styleSheet">
+        <string notr="true">QWidget#level_1{
+		background-color:#d4dff3;
+		border:1px solid #d4dff3; }
+
+</string>
+       </property>
+       <attribute name="title">
+        <string>电阻调平</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="directionValue">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:1px solid grey;
+background-color: rgba(226, 226, 226, 150);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="angleValue">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border:1px solid grey;
+background-color: rgba(226, 226, 226, 150);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QPushButton" name="startLevel_1">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>确定调平</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="direction">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>调平方向</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="angle">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>调平角度(°)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="controlProbe.qrc"/>
+ </resources>
+ <connections/>
+</ui>

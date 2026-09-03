@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.37507.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutoControlDll", "..\AutoControlDll\AutoControlDll.vcxproj", "{41593E46-A34E-46C2-8238-DB2516E453A4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Home", "..\Home\Home.vcxproj", "{9CB85C1C-D606-41F7-A01B-D9914962A165}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41593E46-A34E-46C2-8238-DB2516E453A4}.Debug|x64.ActiveCfg = Debug|x64
+		{41593E46-A34E-46C2-8238-DB2516E453A4}.Debug|x64.Build.0 = Debug|x64
+		{41593E46-A34E-46C2-8238-DB2516E453A4}.Release|x64.ActiveCfg = Release|x64
+		{41593E46-A34E-46C2-8238-DB2516E453A4}.Release|x64.Build.0 = Release|x64
+		{9CB85C1C-D606-41F7-A01B-D9914962A165}.Debug|x64.ActiveCfg = Debug|x64
+		{9CB85C1C-D606-41F7-A01B-D9914962A165}.Debug|x64.Build.0 = Debug|x64
+		{9CB85C1C-D606-41F7-A01B-D9914962A165}.Release|x64.ActiveCfg = Release|x64
+		{9CB85C1C-D606-41F7-A01B-D9914962A165}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B233FD5-C2FB-403D-B79A-83A27F19D57A}
+	EndGlobalSection
+EndGlobal
