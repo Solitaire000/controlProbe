@@ -6,37 +6,22 @@
 ## 目录
 
 - [项目简介](#项目简介)
-- [核心特性](#核心特性)
 - [系统架构](#系统架构)
 - [技术方案详解](#技术方案详解)
 - [训练策略](#训练策略)
 - [实验结果](#实验结果)
 - [目录结构](#目录结构)
 - [技术栈](#技术栈)
-- [参考文献](#参考文献)
 
 ---
 
 ## 项目简介
-
-微波探针台（Probe Station）是晶圆级微波/射频参数测试的核心设备，测试前需要保证 GSG（Ground-Signal-Ground）三爪探针精确调平并与晶圆/校准片可靠接触。传统方式依赖人工目视判断探针接触后留下的针痕（scrub mark），效率低、精度依赖操作员经验。
 
 本项目构建了一套基于深度学习的多任务视觉检测网络 **GSGProbeNet**，在单张图像上同步完成三个任务：
 
 1. **探针检测 + 关键点定位**：定位探针旋转框及针尖等 16 个关键结构点；
 2. **校准片检测 + 分类**：定位校准片并识别其规格/状态；
 3. **针痕检测 + 分组**：检测探针接触后留下的针痕点，并将同一次下压产生的 G-S-G 三点正确归为一组。
-
-## 核心特性
-
-- ✅ **HRNet + FPN 主干**，全程保持高分辨率特征表示，对针尖、针痕等小目标更友好；
-- ✅ **旋转框（Rotated FCOS）检测头**，适配探针/校准片任意安装朝向，避免水平框引入大量背景冗余；
-- ✅ **soft-argmax 关键点解码 + 逐点不确定度估计**，坐标解码过程完全可导，同时输出每个关键点的置信度；
-- ✅ **多任务同方差不确定性自适应损失加权**，5 个子任务的损失权重由网络自动学习，无需人工网格搜索；
-- ✅ **关联嵌入（Associative Embedding）针痕分组**，端到端学习"哪些针痕点属于同一次下压"，而非依赖人工设计的几何规则；
-- ✅ **合成扰动自监督标签生成**：用程序化挖洞/局部高斯模糊，为"遮挡率、失焦度"这类无法人工标注的连续量生成精确的训练标签；
-- ✅ **两阶段迁移学习策略**：伪标签预训练 + 人工标注分层学习率微调，应对高精度标注数据稀缺的问题；
-- ✅ **OpenCV DNN 轻量部署路径**：产线针痕检测采用 YOLOv8，兼顾跨平台部署与检测精度。
 
 ## 系统架构
 
@@ -232,16 +217,3 @@ sigma_warmup_epochs = 5
 ## 技术栈
 
 `Python` · `PyTorch` · `HRNet` · `FCOS` · `OpenCV` · `ONNX` · `C++` (部署) · `Qt` (上位机界面)
-
-## 参考文献
-
-- Tian et al., *FCOS: Fully Convolutional One-Stage Object Detection*, ICCV 2019
-- Lin et al., *Focal Loss for Dense Object Detection*, ICCV 2017
-- Kendall & Gal, *Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics*, CVPR 2018
-- Kendall & Gal, *What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?*, NeurIPS 2017
-- Newell et al., *Associative Embedding: End-to-End Learning for Joint Detection and Grouping*, NeurIPS 2017
-- Sun et al., *Deep High-Resolution Representation Learning for Human Pose Estimation (HRNet)*, CVPR 2019
-
----
-
-> 本仓库为课题组内相关研究方向的技术记录与代码整理，部分模块为团队协作成果，具体分工请参考项目说明文档。
